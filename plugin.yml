@@ -13,3 +13,8 @@ commands:
     usage: /changetexture <url>
     aliases: [settexture,changetxtr]
     permission: dropheads.changetexture
+
+permissions:
+  dropheads.changetexture:
+    description: Permission to use /changetexture
+    default: op
