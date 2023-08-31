@@ -1,0 +1,15 @@
+name: ChangeHeads
+main: net.evmodder.ChangeHeads
+author: EvModder
+description: Change player head textures
+website: https://dev.bukkit.org/projects/dropheads/pages/extras
+version: 1.0
+api-version: 1.13
+depend: [DropHeads]
+
+commands:
+  changetexture:
+    description: Set the texture for a player head
+    usage: /changetexture <url>
+    aliases: [settexture,changetxtr]
+    permission: dropheads.changetexture
