@@ -4,6 +4,7 @@ import net.evmodder.EvLib.EvCommand;
 import net.evmodder.EvLib.EvPlugin;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 import java.util.Base64;
 import java.util.List;
 import org.bukkit.ChatColor;
@@ -26,9 +27,9 @@ public class ChangeHeads extends EvPlugin{
 		@Override final public List<String> onTabComplete(CommandSender s, Command c, String a, String[] args){
 			if(s instanceof Player){
 				final URL skinURL = ((Player)s).getPlayerProfile().getTextures().getSkin();
-				if(skinURL != null) return List.of(skinURL.toString().substring(skinURL.toString().lastIndexOf('/')+1));
+				if(skinURL != null) return Arrays.asList(skinURL.toString().substring(skinURL.toString().lastIndexOf('/')+1));
 			}
-			return List.of();
+			return Arrays.asList();
 		}
 
 		@Override final public boolean onCommand(CommandSender sender, Command command, String label, String args[]){
