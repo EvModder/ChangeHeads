@@ -51,7 +51,7 @@ public class ChangeHeads extends EvPlugin{
 				return false;
 			}
 			final String urlCode = args[0].substring(args[0].lastIndexOf('/')+1);
-			if(!urlCode.matches("[0-9a-f]{64}")){
+			if(!urlCode.matches("[0-9a-f]+")){
 				sender.sendMessage(ChatColor.RED+"Invalid texture code format");
 				return false;
 			}
